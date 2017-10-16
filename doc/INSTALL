@@ -21,7 +21,7 @@ Vilma can be obtained from the Horde website and FTP server, at
    ftp://ftp.horde.org/pub/vilma/
 
 Bleeding-edge development versions of Vilma are available via CVS; see
-the file docs/HACKING in the Horde distribution for information on
+the file doc/HACKING in the Horde distribution for information on
 accessing the Horde CVS repository.
 
 
@@ -128,7 +128,7 @@ CONFIGURING VILMA
    translations of text displayed by applications; the translations are
    found in the po/ directory.  If a translation is not yet available
    for your locale (and you wish to create one), or if you're having
-   trouble using a provided translation, please see the horde/docs/TRANSLATIONS
+   trouble using a provided translation, please see the horde/doc/TRANSLATIONS
    file for instructions.
 
 4. Testing Vilma

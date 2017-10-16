@@ -10,7 +10,7 @@
   <email>jan@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-03-20</date>
+ <date>2017-10-13</date>
  <version>
   <release>1.0.0</release>
   <api>1.0.0</api>
@@ -36,13 +36,13 @@
     <file name="hooks.php.dist" role="horde" />
     <file name="prefs.php" role="horde" />
    </dir> <!-- /config -->
-   <dir name="docs">
+   <dir name="doc">
     <file name="CHANGES" role="doc" />
     <file name="CREDITS" role="doc" />
     <file name="INSTALL" role="doc" />
     <file name="release.yml" role="doc" />
     <file name="TODO" role="doc" />
-   </dir> <!-- /docs -->
+   </dir> <!-- /doc -->
    <dir name="domains">
     <file name="delete.php" role="horde" />
     <file name="edit.php" role="horde" />
@@ -185,11 +185,11 @@
    <install as="vilma/config/conf.xml" name="config/conf.xml" />
    <install as="vilma/config/hooks.php.dist" name="config/hooks.php.dist" />
    <install as="vilma/config/prefs.php" name="config/prefs.php" />
-   <install as="CHANGES" name="docs/CHANGES" />
-   <install as="CREDITS" name="docs/CREDITS" />
-   <install as="INSTALL" name="docs/INSTALL" />
-   <install as="release.yml" name="docs/release.yml" />
-   <install as="TODO" name="docs/TODO" />
+   <install as="CHANGES" name="doc/CHANGES" />
+   <install as="CREDITS" name="doc/CREDITS" />
+   <install as="INSTALL" name="doc/INSTALL" />
+   <install as="release.yml" name="doc/release.yml" />
+   <install as="TODO" name="doc/TODO" />
    <install as="vilma/domains/delete.php" name="domains/delete.php" />
    <install as="vilma/domains/edit.php" name="domains/edit.php" />
    <install as="vilma/domains/index.php" name="domains/index.php" />
@@ -261,7 +261,7 @@
     <release>beta</release>
     <api>beta</api>
    </stability>
-   <date>2017-03-20</date>
+   <date>2017-10-13</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD</license>
    <notes>
 * Initial release.
