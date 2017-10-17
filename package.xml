@@ -10,7 +10,7 @@
   <email>jan@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-16</date>
+ <date>2017-10-17</date>
  <version>
   <release>1.0.0</release>
   <api>1.0.0</api>
@@ -38,10 +38,10 @@
    </dir> <!-- /config -->
    <dir name="doc">
     <file name="CHANGES" role="doc" />
-    <file name="CREDITS" role="doc" />
-    <file name="INSTALL" role="doc" />
+    <file name="CREDITS.rst" role="doc" />
+    <file name="INSTALL.rst" role="doc" />
     <file name="release.yml" role="doc" />
-    <file name="TODO" role="doc" />
+    <file name="TODO.rst" role="doc" />
    </dir> <!-- /doc -->
    <dir name="domains">
     <file name="delete.php" role="horde" />
@@ -186,10 +186,10 @@
    <install as="vilma/config/hooks.php.dist" name="config/hooks.php.dist" />
    <install as="vilma/config/prefs.php" name="config/prefs.php" />
    <install as="CHANGES" name="doc/CHANGES" />
-   <install as="CREDITS" name="doc/CREDITS" />
-   <install as="INSTALL" name="doc/INSTALL" />
+   <install as="CREDITS.rst" name="doc/CREDITS.rst" />
+   <install as="INSTALL.rst" name="doc/INSTALL.rst" />
    <install as="release.yml" name="doc/release.yml" />
-   <install as="TODO" name="doc/TODO" />
+   <install as="TODO.rst" name="doc/TODO.rst" />
    <install as="vilma/domains/delete.php" name="domains/delete.php" />
    <install as="vilma/domains/edit.php" name="domains/edit.php" />
    <install as="vilma/domains/index.php" name="domains/index.php" />
@@ -261,7 +261,7 @@
     <release>beta</release>
     <api>beta</api>
    </stability>
-   <date>2017-10-16</date>
+   <date>2017-10-17</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD</license>
    <notes>
 * Initial release.
