@@ -74,9 +74,9 @@ Thanks,
 The Vilma team
 
 
-.. _README: README
+.. _README: README.rst
 .. _LICENSE: http://www.horde.org/licenses/bsd
-.. _doc/CHANGES: CHANGES
-.. _doc/CREDITS: CREDITS
+.. _doc/CHANGES: doc/CHANGES
+.. _doc/CREDITS: doc/CREDITS
 .. _INSTALL:
-.. _doc/INSTALL: INSTALL
+.. _doc/INSTALL: doc/INSTALL
