@@ -21,7 +21,20 @@
  </stability>
  <license uri="http://www.horde.org/licenses/bsd">BSD</license>
  <notes>
-* Initial release.
+* [jan] Add Finnish translation (Leena Heino &lt;liinu@uta.fi&gt;).
+* [jan] Add Latvian translation (Jānis Eisaks &lt;jancs@dv.lv&gt;).
+* [jan] Provide default configuration files instead of .dist versions.
+* [bkl] Restructure application to have Users, Aliases, Groups and Forwards.
+* [bkl] Add qmailldap backend support.
+* [ben] Better support for MS-SQL.
+* [jan] Allow to use custom table and column names (guilleva@gmail.com, Request #3244).
+* [cjh] Use bind variables in SQL driver (selsky@columbia.edu, Request #1795).
+* [jmf] Downcase user and virtuals.
+* [jmf] Support for virtuals with external (non-local) e-mail destinations.
+* [jan] Add Spanish translation (Manuel Perez Ayala &lt;mperaya@alcazaba.unex.es&gt;).
+* [jmf] Add support for creating mailboxes via IMAP protocol.
+* [jan] Add Lithuanian translation (Vilius ¦umskas &lt;vilius@lnk.lt&gt;).
+* [jan] Add German translation.
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -264,7 +277,20 @@
    <date>2017-10-17</date>
    <license uri="http://www.horde.org/licenses/bsd">BSD</license>
    <notes>
-* Initial release.
+* [jan] Add Finnish translation (Leena Heino &lt;liinu@uta.fi&gt;).
+* [jan] Add Latvian translation (Jānis Eisaks &lt;jancs@dv.lv&gt;).
+* [jan] Provide default configuration files instead of .dist versions.
+* [bkl] Restructure application to have Users, Aliases, Groups and Forwards.
+* [bkl] Add qmailldap backend support.
+* [ben] Better support for MS-SQL.
+* [jan] Allow to use custom table and column names (guilleva@gmail.com, Request #3244).
+* [cjh] Use bind variables in SQL driver (selsky@columbia.edu, Request #1795).
+* [jmf] Downcase user and virtuals.
+* [jmf] Support for virtuals with external (non-local) e-mail destinations.
+* [jan] Add Spanish translation (Manuel Perez Ayala &lt;mperaya@alcazaba.unex.es&gt;).
+* [jmf] Add support for creating mailboxes via IMAP protocol.
+* [jan] Add Lithuanian translation (Vilius ¦umskas &lt;vilius@lnk.lt&gt;).
+* [jan] Add German translation.
    </notes>
   </release>
  </changelog>
