@@ -1,7 +1,7 @@
 {
     "name": "horde/vilma",
     "description": "Domain and user administration application",
-    "type": "project",
+    "type": "horde-application",
     "homepage": "https://www.horde.org",
     "license": "BSD",
     "authors": [
@@ -11,24 +11,27 @@
             "role": "lead"
         }
     ],
-    "version": "1.0.0",
-    "time": "2017-11-11",
+    "time": "2021-03-15",
     "repositories": [
         {
-            "type": "pear",
-            "url": "https://pear.horde.org"
+            "type": "composer",
+            "url": "https://horde-satis.maintaina.com/"
         }
     ],
     "require": {
-        "php": "^5.3"
+        "horde/horde-installer-plugin": "*",
+        "php": "^7",
+        "horde/horde": "^6"
     },
-    "replace": {
-        "pear-pear.horde.org/vilma": "1.*",
-        "pear-horde/vilma": "1.*"
+    "suggest": {
+        "horde/test": "^3"
     },
     "autoload": {
         "psr-0": {
             "Vilma": "lib/"
         }
-    }
+    },
+    "bin": [
+        "bin/vilma-create-mailboxes"
+    ]
 }
