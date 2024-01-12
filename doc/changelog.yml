@@ -8,8 +8,9 @@
   license:
     identifier: BSD
     uri: http://www.horde.org/licenses/bsd
-  notes: |+
-    
+  notes: |
+    [rla] Change license identifier from 'BSD' to BSD-2-Clause to make SPDX compatible and to align with the actually shipped license file.
+    |+
 1.0.0alpha1:
   api: 1.0.0
   state:

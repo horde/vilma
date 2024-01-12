@@ -1,10 +1,9 @@
 {
-    "minimum-stability": "dev",
     "name": "horde/vilma",
     "description": "Domain and user administration application",
     "type": "horde-application",
     "homepage": "https://www.horde.org",
-    "license": "BSD",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Jan Schneider",
@@ -12,18 +11,14 @@
             "role": "lead"
         }
     ],
-    "time": "2021-03-15",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://horde-satis.maintaina.com/"
-        }
-    ],
+    "time": "2024-01-12",
+    "repositories": [],
     "require": {
-        "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || '*'",
-        "php": "^7",
+        "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^2",
+        "php": "^7 || ^8",
         "horde/horde": "^6 || dev-FRAMEWORK_6_0"
     },
+    "require-dev": {},
     "suggest": {
         "horde/test": "^3 || dev-FRAMEWORK_6_0"
     },
@@ -32,7 +27,13 @@
             "Vilma": "lib/"
         }
     },
+    "autoload-dev": {},
     "bin": [
         "bin/vilma-create-mailboxes"
-    ]
+    ],
+    "config": {
+        "allow-plugins": {
+            "horde/horde-installer-plugin": true
+        }
+    }
 }
