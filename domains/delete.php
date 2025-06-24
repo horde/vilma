@@ -31,7 +31,7 @@ if ($vars->get('submitbutton') == _("Do not delete")) {
 
 if ($vars->get('submitbutton') == _("Delete")) {
     if ($form->validate($vars)) {
-        $info = $form->getInfo($vars, $info);
+        $info = $form->getInfo($vars);
         try {
             $delete = $vilma->driver->deleteDomain($info['domain_id']);
             $notification->push(_("Domain deleted."), 'horde.success');

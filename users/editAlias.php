@@ -25,7 +25,7 @@ $vars = Horde_Variables::getDefaultVariables();
 if (isset($vars->mode)) {
     $form = new Vilma_Form_EditAlias($vars);
     if ($form->validate($vars)) {
-        $info = $form->getInfo($vars, $info);
+        $info = $form->getInfo($vars);
         try {
             $alias_id = $vilma->driver->saveAlias($info);
             $notification->push(_("Alias saved."), 'horde.success');
@@ -78,7 +78,7 @@ if (!isset($vars->mode) || $vars->retry) {
     $form = new Vilma_Form_EditAlias($vars);
 /*
     if ($form->validate($vars)) {
-        $form->getInfo($vars, $info);
+        $info = $form->getInfo($vars);
         $alias_id = $vilma->driver->saveAlias($info);
         if (is_a($alias_id, 'PEAR_Error')) {
             Horde::log($user_id, 'ERR');

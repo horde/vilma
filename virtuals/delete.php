@@ -40,7 +40,7 @@ $form->addVariable(sprintf(_("Delete the virtual email address \"%s\" => \"%s\"?
 
 if ($vars->submitbutton == _("Delete") &&
     $form->validate($vars)) {
-    $info = $form->getInfo($vars, $info);
+    $info = $form->getInfo($vars);
     try {
         $delete = $vilma->driver->deleteVirtual($info['virtual_id']);
         $notification->push(_("Virtual email deleted."), 'horde.success');
