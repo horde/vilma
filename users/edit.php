@@ -64,7 +64,7 @@ if (!isset($vars->id) && !$vilma->driver->isBelowMaxUsers($domain)) {
 
 $form = new Vilma_Form_EditUser($vars);
 if ($form->validate($vars)) {
-    $form->getInfo($vars, $info);
+    $info = $form->getInfo($vars, $info);
     $info['user_name'] = Horde_String::lower($info['user_name']) . '@' . $domain;
     try {
         $vilma->driver->saveUser($info);

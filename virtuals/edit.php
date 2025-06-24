@@ -60,7 +60,7 @@ if ($vars->destination_type == 'remote') {
 }
 
 if ($form->validate($vars)) {
-    $form->getInfo($vars, $info);
+    $info = $form->getInfo($vars, $info);
     $info['stripped_email'] = Horde_String::lower($info['stripped_email']);
     if ($info['destination_type'] == 'remote') {
         $info['virtual_destination'] = Horde_String::lower($info['virtual_destination']);

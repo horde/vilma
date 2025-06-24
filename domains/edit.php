@@ -25,7 +25,7 @@ try {
 }
 
 if ($form->validate($vars)) {
-    $form->getInfo($vars, $info);
+    $info = $form->getInfo($vars, $info);
     $info['name'] = Horde_String::lower($info['name']);
     try {
         $domain_id = $vilma->driver->saveDomain($info);

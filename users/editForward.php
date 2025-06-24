@@ -26,7 +26,7 @@ $vars = Horde_Variables::getDefaultVariables();
 if (isset($vars->mode)) {
     $form = new Vilma_Form_EditForward($vars);
     if ($form->validate($vars)) {
-        $form->getInfo($vars, $info);
+        $info = $form->getInfo($vars, $info);
         try {
             $forward_id = $vilma->driver->saveForward($info);
             $notification->push(_("forward saved."), 'horde.success');

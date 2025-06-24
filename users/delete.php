@@ -103,7 +103,7 @@ if ($vars->get('submitbutton') == _("Do not delete")) {
 
 if ($vars->get('submitbutton') == _("Delete") &&
     $form->validate($vars)) {
-    $form->getInfo($vars, $info);
+    $info = $form->getInfo($vars, $info);
 
     switch ($type) {
     case 'alias':
