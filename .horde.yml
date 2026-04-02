@@ -31,3 +31,7 @@ dependencies:
   optional:
     composer:
       horde/test: ^3
+autoload:
+  classmap:
+    - lib/
+vendor: horde
