@@ -22,17 +22,14 @@ class VilmaUpgradeAutoIncrement extends Horde_Db_Migration_Base
         $this->changeColumn('vilma_domains', 'domain_id', 'autoincrementKey');
         $this->changeColumn('vilma_users', 'user_id', 'autoincrementKey');
         $this->changeColumn('vilma_virtuals', 'virtual_id', 'autoincrementKey');
-        try {
+        if (in_array('vilma_domains_seq', $this->tables())) {
             $this->dropTable('vilma_domains_seq');
-        } catch (Horde_Db_Exception $e) {
         }
-        try {
+        if (in_array('vilma_users_seq', $this->tables())) {
             $this->dropTable('vilma_users_seq');
-        } catch (Horde_Db_Exception $e) {
         }
-        try {
+        if (in_array('vilma_virtuals_seq', $this->tables())) {
             $this->dropTable('vilma_virtuals_seq');
-        } catch (Horde_Db_Exception $e) {
         }
     }
 
