@@ -1,9 +1,9 @@
 <p class="item">
- &nbsp;<a href="<tag:actions.new_url />"><tag:actions.new_text /></a> |
- &nbsp;<a href="<tag:actions.users_url />"><tag:actions.users_text /></a>
+ &nbsp;<a href="<?php echo $this->actions['new_url'] ?>"><?php echo $this->actions['new_text'] ?></a> |
+ &nbsp;<a href="<?php echo $this->actions['users_url'] ?>"><?php echo $this->actions['users_text'] ?></a>
 </p>
 
-<if:virtuals>
+<?php if (!empty($this->virtuals)): ?>
 <table class="horde-table">
  <tr class="item">
   <th>&nbsp;</th>
@@ -14,19 +14,19 @@
    <?php echo _("Destination") ?>
   </th>
  </tr>
- <loop:virtuals>
+<?php foreach ($this->virtuals as $virtual): ?>
  <tr>
   <td>
-   <a href="<tag:virtuals.edit_url />"><tag:images.edit /></a>
-   <a href="<tag:virtuals.del_url />"><tag:images.delete /></a>
+   <a href="<?php echo $virtual['edit_url'] ?>"><?php echo $this->images['edit'] ?></a>
+   <a href="<?php echo $virtual['del_url'] ?>"><?php echo $this->images['delete'] ?></a>
   </td>
   <td>
-   <tag:virtuals.virtual_email />
+   <?php echo $this->escape($virtual['virtual_email']) ?>
   </td>
   <td align="center">
-   <tag:virtuals.virtual_destination />
+   <?php echo $this->escape($virtual['virtual_destination']) ?>
   </td>
  </tr>
- </loop:virtuals>
+<?php endforeach ?>
 </table>
-</if:virtuals>
+<?php endif ?>

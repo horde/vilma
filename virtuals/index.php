@@ -37,9 +37,8 @@ foreach ($virtuals as $id => $virtual) {
         ->add('virtual_id', $virtual['virtual_id']);
 }
 
-$template = $injector->createInstance('Horde_Template');
-$template->setOption('gettext', true);
-$template->set('virtuals', $virtuals, true);
+$view = new Horde_View(['templatePath' => VILMA_TEMPLATES . '/virtuals']);
+$view->virtuals = $virtuals;
 
 /* Set up the template action links. */
 $actions = array();
@@ -55,15 +54,15 @@ if (!Vilma::isDomainAdmin()) {
 }
 $actions['users_url'] = $url;
 $actions['users_text'] = _("Users");
-$template->set('actions', $actions);
+$view->actions = $actions;
 
 /* Set up the field list. */
 $images = array('delete' => Horde::img('delete.png', _("Delete User")),
                 'edit' => Horde::img('edit.png', _("Edit User")));
-$template->set('images', $images);
+$view->images = $images;
 
 /* Render the page. */
 $page_output->header();
 $notification->notify(array('listeners' => 'status'));
-echo $template->fetch(VILMA_TEMPLATES . '/virtuals/index.html');
+echo $view->render('index');
 $page_output->footer();
