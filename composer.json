@@ -11,10 +11,10 @@
             "role": "lead"
         }
     ],
-    "time": "2024-01-12",
+    "time": "2026-05-21",
     "repositories": [],
     "require": {
-        "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^2",
+        "horde/horde-installer-plugin": "dev-FRAMEWORK_6_0 || ^3 || ^2",
         "php": "^7 || ^8",
         "horde/horde": "^6 || dev-FRAMEWORK_6_0"
     },
@@ -23,9 +23,9 @@
         "horde/test": "^3 || dev-FRAMEWORK_6_0"
     },
     "autoload": {
-        "psr-0": {
-            "Vilma": "lib/"
-        }
+        "classmap": [
+            "lib/"
+        ]
     },
     "autoload-dev": {},
     "bin": [
@@ -34,6 +34,11 @@
     "config": {
         "allow-plugins": {
             "horde/horde-installer-plugin": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-FRAMEWORK_6_0": "1.x-dev"
         }
     }
 }

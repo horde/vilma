@@ -35,3 +35,23 @@
     [jmf] Add support for creating mailboxes via IMAP protocol.
     [jan] Add Lithuanian translation (Vilius ¦umskas <vilius@lnk.lt>).
     [jan] Add German translation.
+1.0.0-alpha3:
+  api: 1.0.0-alpha3
+  state:
+    release: alpha
+    api: alpha
+  date: 2026-05-21
+  license:
+    identifier: BSD-2-Clause
+    uri: https://spdx.org/licenses/BSD-2-Clause.html
+  notes: |-
+    docs: create/update conf.php.dist
+    feat: Replace Horde_Template with Horde_View
+    fix: More defensive code when trying to drop tables
+    fix: Support both old-style Horde_Variables and modern Horde\Util\Variables
+    fix: Drop unnecessary / uninitialized form parametet
+    fix: getInfo() no longer writes back to second parameter. Use return value.
+    Change license identifier to BSD-2-Clause and make composer.json file compliant with recent composer.
+    Mark as a H6 app.
+    Add CI job for satis repo update
+    Development mode for vilma-1.0.0alpha3

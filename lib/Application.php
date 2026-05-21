@@ -39,7 +39,7 @@ class Vilma_Application extends Horde_Registry_Application
      *
      * @var string
      */
-    public $version = 'H6 (1.0.0alpha2)';
+    public $version = '1.0.0-alpha3';
 
     public $driver = null;
     public $curdomain = null;
