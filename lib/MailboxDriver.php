@@ -8,6 +8,9 @@
  * @author  Jason M. Felice <jason.m.felice@gmail.com>
  * @package Vilma
  */
+
+use Horde\Vilma\VilmaConfig;
+
 abstract class Vilma_MailboxDriver
 {
     /**
@@ -76,13 +79,15 @@ abstract class Vilma_MailboxDriver
      */
     public static function factory($driver = null, $params = null)
     {
+        $config = $injector->get('VilmaConfig');
+
         if (is_null($driver)) {
-            $driver = $GLOBALS['conf']['mailboxes']['driver'];
+            $driver = $config->get('mailboxes.driver'];
         }
         $driver = Horde_String::ucfirst(basename($driver));
 
         if (is_null($params)) {
-            $params = $GLOBALS['conf']['mailboxes']['params'];
+            $params = $config->get('mailboxes.params'];
         }
 
         $class = 'Vilma_MailboxDriver_' . $driver;

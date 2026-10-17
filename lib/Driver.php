@@ -9,6 +9,9 @@
  * @author  Daniel Collins <horde_dev@argentproductions.com>
  * @package Vilma
  */
+
+use Horde\Vilma\VilmaConfig;
+
 abstract class Vilma_Driver
 {
     /**
@@ -285,6 +288,7 @@ abstract class Vilma_Driver
      */
     public function saveUser($info)
     {
+        $config = $injector->get('VilmaConfig');
         $create = empty($info['user_id']);
         $info['user_id'] = $this->_saveUser($info);
 
@@ -299,10 +303,10 @@ abstract class Vilma_Driver
             }
         }
 
-        if (isset($GLOBALS['conf']['mta']['auth_update_script']) &&
+        if (isset($config->get('mta.auth_update_script']) &&
             !empty($info['password'])) {
             $cmd = sprintf('%s set %s %s 2>&1',
-                           $GLOBALS['conf']['mta']['auth_update_script'],
+                           $config->get('mta.auth_update_script'],
                            escapeshellarg($info['user_name']),
                            escapeshellarg($info['password']));
             $msg = system($cmd, $ec);
@@ -525,8 +529,9 @@ abstract class Vilma_Driver
      */
     public static function factory($driver = null, $params = null)
     {
+        $config = $injector->get('VilmaConfig');
         if (is_null($driver)) {
-            $driver = $GLOBALS['conf']['storage']['driver'];
+            $driver = $config->get('storage.driver'];
         }
         $driver = Horde_String::ucfirst(basename($driver));
 
